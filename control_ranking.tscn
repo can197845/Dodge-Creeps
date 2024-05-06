@@ -1,0 +1,119 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwhnxoqhnw7o7"]
+
+[ext_resource type="FontFile" uid="uid://bsuypsvtet4yp" path="res://fonts/Xolonium-Regular.ttf" id="1_ibou7"]
+[ext_resource type="Script" path="res://control_ranking.gd" id="1_qw5e1"]
+
+[node name="Control_ranking" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qw5e1")
+
+[node name="LabelTitulo" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -72.0
+offset_top = 160.0
+offset_right = 96.0
+offset_bottom = 200.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_ibou7")
+theme_override_font_sizes/font_size = 26
+text = "Posiciones"
+
+[node name="LabelPos1" type="Label" parent="."]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 248.0
+offset_right = 168.0
+offset_bottom = 271.0
+text = "1"
+
+[node name="LabelPos2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 272.0
+offset_right = 168.0
+offset_bottom = 295.0
+text = "2
+"
+
+[node name="LabelPos3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 296.0
+offset_right = 168.0
+offset_bottom = 319.0
+text = "3"
+
+[node name="LabelPos4" type="Label" parent="."]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 320.0
+offset_right = 168.0
+offset_bottom = 343.0
+text = "4"
+
+[node name="LabelPos5" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 128.0
+offset_top = 344.0
+offset_right = 168.0
+offset_bottom = 367.0
+text = "5"
+
+[node name="Valor1" type="Label" parent="."]
+layout_mode = 0
+offset_left = 272.0
+offset_top = 248.0
+offset_right = 312.0
+offset_bottom = 271.0
+text = "0"
+
+[node name="Valor2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 272.0
+offset_top = 272.0
+offset_right = 312.0
+offset_bottom = 295.0
+text = "0"
+
+[node name="Valor3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 272.0
+offset_top = 296.0
+offset_right = 312.0
+offset_bottom = 319.0
+text = "0"
+
+[node name="Valor4" type="Label" parent="."]
+layout_mode = 0
+offset_left = 272.0
+offset_top = 320.0
+offset_right = 312.0
+offset_bottom = 343.0
+text = "0"
+
+[node name="Valor5" type="Label" parent="."]
+layout_mode = 0
+offset_left = 272.0
+offset_top = 344.0
+offset_right = 312.0
+offset_bottom = 367.0
+text = "0"
+
+[node name="BtnBack" type="Button" parent="."]
+layout_mode = 0
+offset_left = 104.0
+offset_top = 456.0
+offset_right = 200.0
+offset_bottom = 472.0
+text = "Volver"
+
+[connection signal="pressed" from="BtnBack" to="." method="_on_btn_back_pressed"]

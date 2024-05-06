@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://d1386ddtvmdrm"]
+
+[ext_resource type="Script" path="res://Gemas.gd" id="1_s26s1"]
+[ext_resource type="Texture2D" uid="uid://bp6adlyj02ajn" path="res://art/blueGem.png" id="1_sknrv"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cya56"]
+radius = 8.0
+height = 16.0
+
+[node name="Gemas" type="Area2D"]
+script = ExtResource("1_s26s1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(184, 192)
+texture = ExtResource("1_sknrv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+texture_filter = 1
+position = Vector2(184, 192)
+shape = SubResource("CapsuleShape2D_cya56")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

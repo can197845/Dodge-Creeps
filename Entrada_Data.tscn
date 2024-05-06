@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://b3fuj8cq1jejh"]
+
+[ext_resource type="Script" path="res://Entrada_Data.gd" id="1_y6q7e"]
+
+[node name="EntradaData" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_y6q7e")
+
+[node name="NameBox" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 200.0
+offset_right = 280.0
+offset_bottom = 231.0
+placeholder_text = "NOMBRE"
+max_length = 15
+
+[node name="BtnNombre" type="Button" parent="."]
+layout_mode = 0
+offset_left = 136.0
+offset_top = 288.0
+offset_right = 264.0
+offset_bottom = 320.0
+text = "Cambiar"
+
+[connection signal="pressed" from="BtnNombre" to="." method="_on_btn_nombre_pressed"]
