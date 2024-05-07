@@ -15,6 +15,7 @@ func game_over():
 	$DeathSound.play()
 	$HUB/ButtonOptions.show()
 	record(score)
+	
 
 
 func new_game():
@@ -65,10 +66,19 @@ func record(tiempo):
 	ControlRanking.load_file()
 	if tiempo>= ControlRanking.ranking.pos1[1]:
 		get_tree().change_scene_to_file("res://Entrada_Data.tscn")
-		var nom = EntradaData.name
 		ControlRanking.ranking.pos1[0] = nom
 		ControlRanking.ranking.pos1[1]= tiempo
 		ControlRanking.save_file()
-	else :
+	
+	elif tiempo>= ControlRanking.ranking.pos2[1]:
+		get_tree().change_scene_to_file("res://Entrada_Data.tscn")
+		var nom = EntradaData.name
+		ControlRanking.ranking.pos2[0] = nom
+		ControlRanking.ranking.pos2[1]= tiempo
+		ControlRanking.save_file()
+	
+	elif tiempo>= ControlRanking.ranking.pos3[1]:
 		print('no pudo')
+		
+		
 	

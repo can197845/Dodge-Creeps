@@ -4,9 +4,7 @@ signal hit
 
 @export var speed = 400
 var screen_size 
-var player_data : Dictionary ={
-	"name" = name
-	}
+
 func _ready():
 	hide()
 	screen_size = get_viewport_rect().size
