@@ -13,19 +13,19 @@ script = ExtResource("1_y6q7e")
 
 [node name="NameBox" type="LineEdit" parent="."]
 layout_mode = 0
-offset_left = 128.0
-offset_top = 200.0
-offset_right = 280.0
-offset_bottom = 231.0
+offset_left = 64.0
+offset_top = 616.0
+offset_right = 216.0
+offset_bottom = 647.0
 placeholder_text = "NOMBRE"
 max_length = 15
 
 [node name="BtnNombre" type="Button" parent="."]
 layout_mode = 0
-offset_left = 136.0
-offset_top = 288.0
-offset_right = 264.0
-offset_bottom = 320.0
-text = "Cambiar"
+offset_left = 64.0
+offset_top = 664.0
+offset_right = 192.0
+offset_bottom = 696.0
+text = "AGREGAR"
 
 [connection signal="pressed" from="BtnNombre" to="." method="_on_btn_nombre_pressed"]

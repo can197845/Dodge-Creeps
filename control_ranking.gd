@@ -1,4 +1,6 @@
-extends Control
+extends Node
+
+
 #_________________________Constantes _______________
 
 const PATH_FILE = "user://ranking.dat"
@@ -13,7 +15,7 @@ var ranking : Dictionary = {
 } 
 
 func _ready():
-	
+
 	pass
 
 func save_file():
@@ -32,12 +34,3 @@ func load_file():
 		
 		ranking = ranking_file.get_var()
 		ranking_file = null
-		
-#Muestra el rankin del juego
-
-func mostrar_ranking():
-	load_file()
-	$LabelPos1.text = str(ranking.pos1[0])
-
-func _on_btn_back_pressed():
-	get_tree().change_scene_to_file("res://Main.tscn")

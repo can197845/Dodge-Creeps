@@ -50,5 +50,5 @@ func _on_button_pressed():
 
 
 func _on_button_options_pressed():
-	get_tree().change_scene_to_file("res://Entrada_Data.tscn")
+	get_tree().change_scene_to_file("res://MostrarRanking.tscn")
 	pass # Replace with function body.
