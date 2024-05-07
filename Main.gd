@@ -4,6 +4,7 @@ extends Node
 var score
 
 func _ready():
+	
 	pass
 	
 func game_over():
