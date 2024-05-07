@@ -35,7 +35,9 @@ func load_file():
 		
 #Muestra el rankin del juego
 
-
+func mostrar_ranking():
+	load_file()
+	$LabelPos1.text = str(ranking.pos1[0])
 
 func _on_btn_back_pressed():
 	get_tree().change_scene_to_file("res://Main.tscn")
