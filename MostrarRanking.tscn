@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dwhnxoqhnw7o7"]
+[gd_scene load_steps=4 format=3 uid="uid://dwhnxoqhnw7o7"]
 
 [ext_resource type="Script" path="res://MostrarRanking.gd" id="1_y7xat"]
 [ext_resource type="FontFile" uid="uid://bsuypsvtet4yp" path="res://fonts/Xolonium-Regular.ttf" id="2_3ntvb"]
-[ext_resource type="PackedScene" uid="uid://b3fuj8cq1jejh" path="res://Entrada_Data.tscn" id="3_qr4mo"]
 [ext_resource type="Texture2D" uid="uid://dp35x8885nrmv" path="res://art/frente.png" id="4_g2cul"]
 
 [node name="MostrarRanking" type="Control"]
@@ -131,5 +130,12 @@ offset_bottom = 367.0
 theme_override_fonts/font = ExtResource("2_3ntvb")
 text = "0"
 
-[node name="EntradaData" parent="." instance=ExtResource("3_qr4mo")]
-layout_mode = 1
+[node name="BtnBack" type="Button" parent="."]
+layout_mode = 0
+offset_left = 288.0
+offset_top = 600.0
+offset_right = 464.0
+offset_bottom = 632.0
+text = "VOLVER"
+
+[connection signal="pressed" from="BtnBack" to="." method="_on_btn_back_pressed"]

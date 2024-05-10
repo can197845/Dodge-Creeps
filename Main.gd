@@ -14,7 +14,9 @@ func game_over():
 	$Music.stop()
 	$DeathSound.play()
 	$HUB/ButtonOptions.show()
+	
 	record(score)
+	
 	
 
 
@@ -63,22 +65,38 @@ func _on_start_timer_timeout():
 	$ScoreTimer.start()
 
 func record(tiempo):
-	ControlRanking.load_file()
-	if tiempo>= ControlRanking.ranking.pos1[1]:
+	
+	if tiempo > ControlRanking.ranking.pos1[1]:
 		get_tree().change_scene_to_file("res://Entrada_Data.tscn")
-		ControlRanking.ranking.pos1[0] = nom
+		ControlRanking.load_file()
+		ControlRanking.ranking.pos1[0]= ControlRanking.ranking.namePlayer
 		ControlRanking.ranking.pos1[1]= tiempo
 		ControlRanking.save_file()
 	
-	elif tiempo>= ControlRanking.ranking.pos2[1]:
+	elif tiempo> ControlRanking.ranking.pos2[1]:
 		get_tree().change_scene_to_file("res://Entrada_Data.tscn")
-		var nom = EntradaData.name
-		ControlRanking.ranking.pos2[0] = nom
+		ControlRanking.load_file()
+		ControlRanking.ranking.pos2[0]= ControlRanking.ranking.namePlayer
 		ControlRanking.ranking.pos2[1]= tiempo
 		ControlRanking.save_file()
 	
 	elif tiempo>= ControlRanking.ranking.pos3[1]:
-		print('no pudo')
-		
-		
+		get_tree().change_scene_to_file("res://Entrada_Data.tscn")
+		ControlRanking.load_file()
+		ControlRanking.ranking.pos3[0]= ControlRanking.ranking.namePlayer
+		ControlRanking.ranking.pos3[1]= tiempo
+		ControlRanking.save_file()
 	
+	elif tiempo>= ControlRanking.ranking.pos4[1]:
+		get_tree().change_scene_to_file("res://Entrada_Data.tscn")
+		ControlRanking.load_file()
+		ControlRanking.ranking.pos4[0]= ControlRanking.ranking.namePlayer
+		ControlRanking.ranking.pos4[1]= tiempo
+		ControlRanking.save_file()
+	
+	elif tiempo>= ControlRanking.ranking.pos5[1]:
+		get_tree().change_scene_to_file("res://Entrada_Data.tscn")
+		ControlRanking.load_file()
+		ControlRanking.ranking.pos5[0]= ControlRanking.ranking.namePlayer
+		ControlRanking.ranking.pos5[1]= tiempo
+		ControlRanking.save_file()

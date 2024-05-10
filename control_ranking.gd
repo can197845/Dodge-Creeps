@@ -7,6 +7,7 @@ const PATH_FILE = "user://ranking.dat"
 
 #_ _______________________Variables ___________________
 var ranking : Dictionary = {
+	"namePlayer" = "canfran",
 	"pos1" = ["Jorge",5],
 	"pos2" = ["Pedro",4],
 	"pos3" = ["Raul",3],

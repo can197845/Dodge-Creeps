@@ -1,6 +1,6 @@
 extends Control
 	
-#Muestra el rankin del juego
+#Muestra el ranking del juego
 func _ready():
 	mostrar_ranking()
 	
@@ -16,4 +16,8 @@ func mostrar_ranking():
 	$Valor4.text = str(ControlRanking.ranking.pos4[1])
 	$LabelPos5.text = str(ControlRanking.ranking.pos5[0])
 	$Valor5.text = str(ControlRanking.ranking.pos5[1])
+	ControlRanking.save_file()
 
+
+func _on_btn_back_pressed():
+	get_tree().change_scene_to_file("res://Main.tscn")

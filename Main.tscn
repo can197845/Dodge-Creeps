@@ -1,11 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://cpts2c5d1shi"]
+[gd_scene load_steps=9 format=3 uid="uid://cpts2c5d1shi"]
 
 [ext_resource type="Script" path="res://Main.gd" id="1_rjrvx"]
 [ext_resource type="PackedScene" uid="uid://dqvf2hmasn5fw" path="res://Mob.tscn" id="2_cmhqp"]
 [ext_resource type="PackedScene" uid="uid://owi25k7mmapy" path="res://Player.tscn" id="3_bt2uc"]
 [ext_resource type="Texture2D" uid="uid://dp35x8885nrmv" path="res://art/frente.png" id="3_dspp4"]
 [ext_resource type="PackedScene" uid="uid://dy7mrm6fow17o" path="res://HUB.tscn" id="4_mp83j"]
-[ext_resource type="PackedScene" uid="uid://d1386ddtvmdrm" path="res://Gemas.tscn" id="4_pbelo"]
 [ext_resource type="AudioStream" uid="uid://mhi33hj6mklh" path="res://art/House In a Forest Loop.ogg" id="6_qwcxo"]
 [ext_resource type="AudioStream" uid="uid://dsv642y6wkv73" path="res://art/gameover.wav" id="7_o5kf1"]
 
@@ -26,8 +25,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_dspp4")
-
-[node name="Gemas" parent="." instance=ExtResource("4_pbelo")]
 
 [node name="Player" parent="." instance=ExtResource("3_bt2uc")]
 

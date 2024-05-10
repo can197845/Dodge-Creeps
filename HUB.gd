@@ -1,8 +1,6 @@
 extends CanvasLayer
 
 signal start_game
-var config_file
-
 
 func _ready():
 	pass 
@@ -26,28 +24,20 @@ func show_game_over():
 	
 	#________ Grabamos el record _________
 	
-	
-
 func update_score(score):
 	$ScoreLabel.text = str(score)
-
 
 func _on_start_button_pressed():
 	$ButtonCredits.hide()
 	$StartButton.hide()
 	$ButtonOptions.hide()
 	start_game.emit()
-	
 
 func _on_message_timer_timeout():
 	$Message.hide()
 
-
-
-
 func _on_button_pressed():
 	get_tree().change_scene_to_file("res://Creditos.tscn")
-
 
 func _on_button_options_pressed():
 	get_tree().change_scene_to_file("res://MostrarRanking.tscn")

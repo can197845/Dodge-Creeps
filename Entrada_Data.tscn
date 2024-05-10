@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://b3fuj8cq1jejh"]
+[gd_scene load_steps=3 format=3 uid="uid://b3fuj8cq1jejh"]
 
 [ext_resource type="Script" path="res://Entrada_Data.gd" id="1_y6q7e"]
+[ext_resource type="Texture2D" uid="uid://dp35x8885nrmv" path="res://art/frente.png" id="2_xqt4f"]
 
 [node name="EntradaData" type="Control"]
 layout_mode = 3
@@ -11,22 +12,32 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_y6q7e")
 
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_xqt4f")
+
 [node name="NameBox" type="LineEdit" parent="."]
 layout_mode = 0
-offset_left = 64.0
-offset_top = 616.0
-offset_right = 216.0
-offset_bottom = 647.0
+offset_left = 16.0
+offset_top = 576.0
+offset_right = 168.0
+offset_bottom = 607.0
 placeholder_text = "NOMBRE"
 max_length = 15
+clear_button_enabled = true
 
 [node name="BtnNombre" type="Button" parent="."]
 layout_mode = 0
-offset_left = 64.0
-offset_top = 664.0
-offset_right = 192.0
-offset_bottom = 696.0
-text = "AGREGAR"
+offset_left = 8.0
+offset_top = 632.0
+offset_right = 136.0
+offset_bottom = 664.0
+text = "VOLVER"
 
 [connection signal="text_submitted" from="NameBox" to="." method="_on_name_box_text_submitted"]
 [connection signal="pressed" from="BtnNombre" to="." method="_on_btn_nombre_pressed"]
